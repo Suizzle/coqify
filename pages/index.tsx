@@ -25,8 +25,8 @@ const Home: NextPage = () => {
         </h1>
 
         <p className="mx-auto mt-12 max-w-xl text-lg text-slate-950 font-bold leading-7">
-          Enter your Twitter / X username:<br></br>
-          <input className="p-10" type='text' placeholder='Enter handle here.'/>
+          Enter your Twitter / X username:<br></br><br></br>
+          <input className="p-1" type='text' placeholder='Enter handle here.'/>
         </p>
 
 
