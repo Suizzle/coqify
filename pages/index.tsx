@@ -26,7 +26,7 @@ const Home: NextPage = () => {
 
         <p className="mx-auto mt-12 max-w-xl text-lg text-slate-950 font-bold leading-7">
           Enter your Twitter / X username:<br></br><br></br>
-          <input className="p-1" type='text' placeholder='Enter handle here.' value="suizzle_"/>
+          <input id="usernameInput" className="p-1" type='text' placeholder='Enter handle here.' value="suizzle_"/>
         </p>
 
 
@@ -57,7 +57,7 @@ const Home: NextPage = () => {
                 <h2 className="mb-1 font-medium text-lg">Original PFP</h2>
                 <Image
                   alt="Original Twitter / X PFP"
-                  src="/michael.jpg"
+                  src= {`https://unavatar.io/twitter/suizzle_`}
                   className="w-96 h-96 rounded-2xl"
                   width={400}
                   height={400}
