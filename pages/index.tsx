@@ -10,7 +10,7 @@ import va from '@vercel/analytics';
 
 const Home: NextPage = () => {
   return (
-    <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
+    <div className="bg-[url('/coq-inu.png')] flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
         <title>🐓 Coqify Your Profile</title>
       </Head>
@@ -22,8 +22,7 @@ const Home: NextPage = () => {
           rel="noreferrer"
           className="border rounded-2xl py-1 px-4 text-slate-500 text-sm mb-5 hover:scale-105 transition duration-300 ease-in-out"
         >
-          Used by over <span className="font-semibold">42069</span> happy
-          users
+          Used by over <span className="font-semibold">42069</span> $COQ aligned chads
         </a>
         <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-slate-900 sm:text-7xl">
           Add a $COQ ring
