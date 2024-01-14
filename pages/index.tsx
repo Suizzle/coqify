@@ -25,12 +25,10 @@ const Home: NextPage = () => {
         </h1>
 
         <p className="mx-auto mt-12 max-w-xl text-lg text-slate-950 font-bold leading-7">
-          Enter your Twitter / X username:
+          Enter your Twitter / X username:<br></br>
+          <input className="p-10" type='text' placeholder='Enter handle here.'/>
         </p>
 
-        <p className="mx-auto mt-12 max-w-xl text-lg text-slate-950 font-bold leading-7">
-          <input type='text' placeholder='Enter your Twitter / X profile:'/>
-        </p>
 
         <div className="flex justify-center space-x-4">
           <button 
