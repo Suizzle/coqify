@@ -10,12 +10,12 @@ import va from '@vercel/analytics';
 
 const Home: NextPage = () => {
   return (
-    <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
+    <div className="bg-yellow-200 flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
         <title>🐓 Coqify Your Profile</title>
       </Head>
       <Header />
-      <main className="bg-opacity-30 bg-cover bg-[url('/coq-inu.png')] flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-20">
+      <main className="bg-cover bg-[url('/coq-inu.png')] bg-opacity-10 flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-20">
         <a
           href="https://twitter.com/nutlope/status/1704894145003741611"
           target="_blank"
