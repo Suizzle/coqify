@@ -26,7 +26,7 @@ const Home: NextPage = () => {
 
         <p className="mx-auto mt-12 max-w-xl text-lg text-slate-950 font-bold leading-7">
           Enter your Twitter / X username:<br></br><br></br>
-          <input className="p-1" type='text' placeholder='Enter handle here.'/>
+          <input className="p-1" type='text' placeholder='Enter handle here.' value="suizzle_"/>
         </p>
 
 
@@ -64,7 +64,7 @@ const Home: NextPage = () => {
                 />
               </div>
               <div className="sm:mt-0 mt-8">
-                <h2 className="mb-1 font-medium text-lg">Coqified Photo</h2>
+                <h2 className="mb-1 font-medium text-lg">Coqified PFP</h2>
                 <Image
                   alt="Coqified PFP"
                   width={400}
