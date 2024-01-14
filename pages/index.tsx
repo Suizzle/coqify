@@ -15,15 +15,7 @@ const Home: NextPage = () => {
         <title>🐓 Coqify Your Profile</title>
       </Head>
       <Header />
-      <main className="bg-cover bg-[url('/coq-inu.png')] bg-opacity-10 flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-20">
-        <a
-          href="https://twitter.com/nutlope/status/1704894145003741611"
-          target="_blank"
-          rel="noreferrer"
-          className="border rounded-2xl py-1 px-4 text-slate-500 text-sm mb-5 hover:scale-105 transition duration-300 ease-in-out"
-        >
-          Used by over <span className="font-semibold">42069</span> $COQ aligned chads
-        </a>
+      <main className="bg-cover bg-[url('/coq-inu.png')] bg-opacity-10 flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-20"> 
         <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-slate-900 sm:text-7xl">
           Add a $COQ ring
           <span className="relative whitespace-nowrap text-[#fcce5f]">
@@ -33,7 +25,7 @@ const Home: NextPage = () => {
           in under a second.
         </h1>
 
-        <p className="mx-auto mt-12 max-w-xl text-lg text-slate-700 leading-7">
+        <p className="mx-auto mt-12 max-w-xl text-lg text-slate-950 font-bold leading-7">
           What if you could very easily and subtly Coqify your pfp using the famous orange/yellow circle in the Coq Inu logo, placed around your current PFP?? 
           Subtle, but easily visible.
         </p>
