@@ -38,29 +38,24 @@ const Home: NextPage = () => {
           Subtle, but easily visible.
         </p>
         <div className="flex justify-center space-x-4">
-          <a
-            className="bg-white rounded-xl text-black font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-gray-100 border"
-            href="https://www.roomgpt.io/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button onClick={() => va.track('RoomGPT link clicked')}>
-              $COQ Lite
-            </button>
-          </a>
-
-          <Link
+          <button 
             className="bg-black rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80"
-            href="/restore"
+            onClick={() => va.track('RoomGPT link clicked')}
+          >
+            $COQ Lite
+          </button>
+          <button 
+            className="bg-black rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80"
+            onClick={() => va.track('RoomGPT link clicked')}
           >
             $COQ Ring
-          </Link>
-          <Link
+          </button>     
+          <button 
             className="bg-black rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80"
-            href="/restore"
+            onClick={() => va.track('RoomGPT link clicked')}
           >
-            Full Penetration
-          </Link>
+            Full penetration
+          </button>   
         </div>
         <div className="flex justify-between items-center w-full flex-col sm:mt-10 mt-6">
           <div className="flex flex-col space-y-10 mt-4 mb-16">
