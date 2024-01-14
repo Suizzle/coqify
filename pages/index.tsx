@@ -10,7 +10,7 @@ import va from '@vercel/analytics';
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-yellow-200 bg-cover bg-[url('/coq-inu-lite.png')] flex w-screen mx-auto flex-col items-center justify-center py-2 min-h-screen">
+    <div className="bg-yellow-200 bg-cover bg-[url('/coq-inu.png')] flex w-screen mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
         <title>🐓 Coqify Your Profile</title>
       </Head>
@@ -32,7 +32,7 @@ const Home: NextPage = () => {
         <p className="mx-auto mt-12 max-w-xl text-lg text-slate-950 font-bold leading-7">
           Enter your Twitter / X username:
         </p>
-        
+
         <p className="mx-auto mt-12 max-w-xl text-lg text-slate-950 font-bold leading-7">
           <input type='text' placeholder='Enter your Twitter / X profile:'/>
         </p>
