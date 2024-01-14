@@ -29,6 +29,14 @@ const Home: NextPage = () => {
           What if you could very easily and subtly Coqify your pfp using the famous orange/yellow circle in the Coq Inu logo, placed around your current PFP?? 
           Subtle, but easily visible.
         </p>
+        <p className="mx-auto mt-12 max-w-xl text-lg text-slate-950 font-bold leading-7">
+          Enter your Twitter / X username:
+        </p>
+        
+        <p className="mx-auto mt-12 max-w-xl text-lg text-slate-950 font-bold leading-7">
+          <input type='text' placeholder='Enter your Twitter / X profile:'/>
+        </p>
+
         <div className="flex justify-center space-x-4">
           <button 
             className="bg-black rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80"
