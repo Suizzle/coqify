@@ -21,7 +21,7 @@ Enter your Twitter / X username. Select options. Coqify.
 Big thanks for [Farid](https://twitter.com/faridrached) for suggesting the app idea and getting me excited about $COQ in the first place.
 Big thanks to [Hassan](https://twitter.com/nutlope) for the Next.js app template.
 Thanks to Vercel for making web app deployment a breeze.
-Thanks to Img.ly for making their awesome `/background-removal` tool available.
+Thanks to Img.ly for making their awesome `background-removal` tool available.
 Thanks to Unavatar for the easy profile image importing.
 Thanks to Cryptovengeance for making Ribbit.Tools such a cool example of meme art generation.
 
