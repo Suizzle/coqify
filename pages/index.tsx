@@ -10,12 +10,12 @@ import va from '@vercel/analytics';
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-yellow-200 flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
+    <div className="bg-yellow-200 flex w-screen mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
         <title>🐓 Coqify Your Profile</title>
       </Head>
       <Header />
-      <main className="bg-cover bg-[url('/coq-inu-lite.png')] bg-opacity-10 flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-20"> 
+      <main className="bg-cover bg-[url('/coq-inu-lite.png')] flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-20"> 
         <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-slate-900 sm:text-7xl">
           Add a $COQ ring
           <span className="relative whitespace-nowrap text-[#fcce5f]">
