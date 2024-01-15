@@ -16,16 +16,18 @@ const {removeBackground} = require("@imgly/background-removal");
 const Home: NextPage = () => {
 
   const [username, setUsername] = useState("CoqInuAvax");
-  const [filter, setFilter] = useState("FullPenetration");
   
   async function update(username: string) {
     await setUsername(username);
     const canvas = document.getElementById("canvas") as HTMLCanvasElement;
     const original = document.getElementById("original") as HTMLImageElement;
-    const coqring = document.getElementById("coqring") as HTMLImageElement; 
+    original.onload = () => {
+      ctx.drawImage(original, 0, 0);
+    }
+    //const coqring = document.getElementById("coqring") as HTMLImageElement; 
     const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
-    ctx.drawImage(original, 0, 0);
-    ctx.drawImage(coqring, 0, 0);
+    
+    //ctx.drawImage(coqring, 0, 0);
   }
 
   return (
@@ -56,29 +58,6 @@ const Home: NextPage = () => {
 
 
         <div className="flex justify-center space-x-4">
-          <Image
-            id="coqring1"
-            alt="Original Twitter / X PFP"
-            src= {'/coqify-overlay.png'}
-            width={40}
-            height={40}
-          />
-          <Image
-            id="coqring2"
-            alt="Original Twitter / X PFP"
-            src= {'/coqify-overlay.png'}
-            className=""
-            width={40}
-            height={40}
-          />
-          <Image
-            id="coqring3"
-            alt="Original Twitter / X PFP"
-            src= {'/coqify-overlay.png'}
-            className=""
-            width={40}
-            height={40}
-          />
           <button 
             className="bg-black rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80"
             onClick={() => va.track('RoomGPT link clicked')}
@@ -92,13 +71,14 @@ const Home: NextPage = () => {
               <div>
                 <h2 className="mb-1 font-medium text-lg">Original PFP</h2>
                 <Image
-                  id="original"
-                  alt="Original Twitter / X PFP"
-                  src= {`https://unavatar.io/twitter/${username}`}
-                  className="w-96 h-96 rounded-2xl"
-                  width={400}
-                  height={400}
-                />
+                    id="original"
+                    alt="Original Twitter / X PFP"
+                    src= {`https://unavatar.io/twitter/${username}`}
+                    className="w-96 h-96 rounded-2xl"
+                    width={400}
+                    height={400}
+                  />
+
               </div>
               <div className="sm:mt-0 mt-8">
                 <h2 className="mb-1 font-medium text-lg">Coqified PFP</h2>
