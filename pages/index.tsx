@@ -21,16 +21,7 @@ const Home: NextPage = () => {
   
   async function update(username: string) {
     await setUsername(username);
-    if (filter=="FullPenetration") {
-      let image_src: ImageData | ArrayBuffer | Uint8Array | Blob | URL | string = `https://unavatar.io/twitter/${username}`;
- 
-      removeBackground(image_src).then((blob: Blob) => {
-        // The result is a blob encoded as PNG. It can be converted to an URL to be used as HTMLImage.src
-      setNoBackgroundUrl(URL.createObjectURL(blob));
-      }); 
-    } else if (filter=="CoqRing") {
-
-    }
+    
   }
 
   return (
@@ -65,13 +56,19 @@ const Home: NextPage = () => {
             className="bg-black rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80"
             onClick={() => va.track('RoomGPT link clicked')}
           >
-            $COQ Ring
+            Classic $COQ Ring
           </button>
           <button 
             className="bg-black rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80"
             onClick={() => va.track('RoomGPT link clicked')}
           >
-            Deep Penetration
+            Black $COQ Letters
+          </button>  
+          <button 
+            className="bg-black rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80"
+            onClick={() => va.track('RoomGPT link clicked')}
+          >
+            Purple $COQ Thrust
           </button>     
           <button 
             className="bg-black rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80"
