@@ -16,20 +16,21 @@ const {removeBackground} = require("@imgly/background-removal");
 const Home: NextPage = () => {
 
   const [username, setUsername] = useState("CoqInuAvax");
-  const [filter, setFilter] = useState("CoqRing");
-
-  let noBackgroundUrl = "";
+  const [filter, setFilter] = useState("FullPenetration");
+  const [noBackgroundUrl, setNoBackgroundUrl] = useState("");
+  
   async function update(username: string) {
     await setUsername(username);
-  }
-
-  async function fullPenetration() {
-    let image_src: ImageData | ArrayBuffer | Uint8Array | Blob | URL | string = `https://unavatar.io/twitter/${username}`;
+    if (filter=="FullPenetration") {
+      let image_src: ImageData | ArrayBuffer | Uint8Array | Blob | URL | string = `https://unavatar.io/twitter/${username}`;
  
-    removeBackground(image_src).then((blob: Blob) => {
-      // The result is a blob encoded as PNG. It can be converted to an URL to be used as HTMLImage.src
-    noBackgroundUrl = URL.createObjectURL(blob);
-})
+      removeBackground(image_src).then((blob: Blob) => {
+        // The result is a blob encoded as PNG. It can be converted to an URL to be used as HTMLImage.src
+      setNoBackgroundUrl(URL.createObjectURL(blob));
+      }); 
+    } else if (filter=="CoqRing") {
+
+    }
   }
 
   return (
