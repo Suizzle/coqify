@@ -45,7 +45,7 @@ const Home: NextPage = () => {
   return (
     <div className="bg-yellow-200 bg-cover bg-[url('/coq-inu.png')] flex w-screen mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
-        <title>🐓 Coqify Your Profile</title>
+        <title>Coqify Your Profile 🐓</title>
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="https://coqify.vercel.app" />
         <meta name="twitter:title" content="Coqify" />
