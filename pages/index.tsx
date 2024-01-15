@@ -11,7 +11,7 @@ import React, { useState } from 'react';
 
 const Home: NextPage = () => {
 
-  const [username, setUsername] = useState("suizzle_");
+  const [username, setUsername] = useState("CoqInuAvax");
 
   return (
     <div className="bg-yellow-200 bg-cover bg-[url('/coq-inu.png')] flex w-screen mx-auto flex-col items-center justify-center py-2 min-h-screen">
