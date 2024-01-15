@@ -7,7 +7,7 @@ import Header from '../components/Header';
 import SquigglyLines from '../components/SquigglyLines';
 import { Testimonials } from '../components/Testimonials';
 import va from '@vercel/analytics';
-import React, { useState } from 'react';
+import React, { CanvasHTMLAttributes, Context, useState } from 'react';
 
 const {removeBackground} = require("@imgly/background-removal");
 
@@ -21,7 +21,11 @@ const Home: NextPage = () => {
   
   async function update(username: string) {
     await setUsername(username);
-    
+    const canvas = document.getElementById("canvas") as HTMLCanvasElement;
+    const original = document.getElementById("original") as HTMLImageElement;
+    const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
+    ctx.drawImage(original, 0, 0);
+    ctx.drawImage(image2, 0, 0);
   }
 
   return (
@@ -83,6 +87,7 @@ const Home: NextPage = () => {
               <div>
                 <h2 className="mb-1 font-medium text-lg">Original PFP</h2>
                 <Image
+                  id="original"
                   alt="Original Twitter / X PFP"
                   src= {`https://unavatar.io/twitter/${username}`}
                   className="w-96 h-96 rounded-2xl"
@@ -92,11 +97,10 @@ const Home: NextPage = () => {
               </div>
               <div className="sm:mt-0 mt-8">
                 <h2 className="mb-1 font-medium text-lg">Coqified PFP</h2>
-                <Image
-                  alt="Coqified PFP"
+                <canvas
+                  id="canvas"
                   width={400}
                   height={400}
-                  src= {noBackgroundUrl}
                   className="w-96 h-96 rounded-2xl sm:mt-0 mt-2"
                 />
               </div>
