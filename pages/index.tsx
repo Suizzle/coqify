@@ -8,7 +8,9 @@ import SquigglyLines from '../components/SquigglyLines';
 import { Testimonials } from '../components/Testimonials';
 import va from '@vercel/analytics';
 import React, { useState } from 'react';
-import imglyRemoveBackground from "@imgly/background-removal"
+//import imglyRemoveBackground from "@imgly/background-removal"
+
+const {removeBackground} = require("@imgly/background-removal-node");
 
 const Home: NextPage = () => {
 
@@ -21,7 +23,7 @@ const Home: NextPage = () => {
   async function fullPenetration() {
     let image_src: ImageData | ArrayBuffer | Uint8Array | Blob | URL | string = `https://unavatar.io/twitter/${username}`;
  
-    imglyRemoveBackground(image_src).then((blob: Blob) => {
+    removeBackground(image_src).then((blob: Blob) => {
       // The result is a blob encoded as PNG. It can be converted to an URL to be used as HTMLImage.src
     noBackgroundUrl = URL.createObjectURL(blob);
 })
