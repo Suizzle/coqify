@@ -34,7 +34,7 @@ const Home: NextPage = () => {
   }
 
   function tweet() {
-    var text = "Bok! I Coqified my profile with Coqify by @suizzle_!";
+    var text = "Bok! I Coqified my profile with Coqify by @suizzle_! https://coqify.vercel.app";
     var encoded = encodeURIComponent(text);
     var twitterIntentUrl = "https://twitter.com/intent/tweet?text=" + encoded;
     window.open(twitterIntentUrl);
