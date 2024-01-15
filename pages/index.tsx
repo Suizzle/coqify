@@ -60,7 +60,7 @@ const Home: NextPage = () => {
             id="coqring"
             alt="Original Twitter / X PFP"
             src= {'/coqify-overlay.png'}
-            className="w-96 h-96 rounded-2xl"
+            className="rounded-2xl"
             width={20}
             height={20}
           />
