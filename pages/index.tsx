@@ -22,11 +22,11 @@ const Home: NextPage = () => {
     await setUsername(username);
     const canvas = document.getElementById("canvas") as HTMLCanvasElement;
     const original = document.getElementById("original") as HTMLImageElement;
-    const coqified = document.createElement("coqified") as HTMLImageElement; 
+    const coqified = document.getElementById("coqified") as HTMLImageElement; 
     coqified.src = "/coqify-overlay.png";
     const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
     ctx.drawImage(original, 0, 0);
-    //ctx.drawImage(coqified, 0, 0);
+    ctx.drawImage(coqified, 0, 0);
   }
 
   return (
@@ -57,6 +57,14 @@ const Home: NextPage = () => {
 
 
         <div className="flex justify-center space-x-4">
+          <Image
+            id="original"
+            alt="Original Twitter / X PFP"
+            src= {'/coqify-overlay.png'}
+            className="w-96 h-96 rounded-2xl"
+            width={20}
+            height={20}
+          />
           <button 
             className="bg-black rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80"
             onClick={() => va.track('RoomGPT link clicked')}
