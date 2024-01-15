@@ -8,13 +8,16 @@ import SquigglyLines from '../components/SquigglyLines';
 import { Testimonials } from '../components/Testimonials';
 import va from '@vercel/analytics';
 import React, { useState } from 'react';
-//import imglyRemoveBackground from "@imgly/background-removal"
 
-const {removeBackground} = require("@imgly/background-removal-node");
+const {removeBackground} = require("@imgly/background-removal");
+
+//const {removeBackground} = require("@imgly/background-removal-node");
 
 const Home: NextPage = () => {
 
   const [username, setUsername] = useState("CoqInuAvax");
+  const [filter, setFilter] = useState("CoqRing");
+
   let noBackgroundUrl = "";
   async function update(username: string) {
     await setUsername(username);
