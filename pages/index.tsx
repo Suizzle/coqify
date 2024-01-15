@@ -65,19 +65,19 @@ const Home: NextPage = () => {
             className="bg-black rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80"
             onClick={() => va.track('RoomGPT link clicked')}
           >
-            $COQ Lite
+            $COQ Ring
           </button>
           <button 
             className="bg-black rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80"
             onClick={() => va.track('RoomGPT link clicked')}
           >
-            $COQ Ring
+            Deep Penetration
           </button>     
           <button 
             className="bg-black rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80"
             onClick={() => va.track('RoomGPT link clicked')}
           >
-            Full penetration
+            Coqify!
           </button>   
         </div>
         <div className="flex justify-between items-center w-full flex-col sm:mt-10 mt-6">
