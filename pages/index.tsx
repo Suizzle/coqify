@@ -7,6 +7,11 @@ import Header from '../components/Header';
 import SquigglyLines from '../components/SquigglyLines';
 import { Testimonials } from '../components/Testimonials';
 import va from '@vercel/analytics';
+import { useState } from 'react';
+
+const [username, setUsername] = useState("suizzle_");
+
+
 
 const Home: NextPage = () => {
   return (
@@ -26,7 +31,14 @@ const Home: NextPage = () => {
 
         <p className="mx-auto mt-12 max-w-xl text-lg text-slate-950 font-bold leading-7">
           Enter your Twitter / X username:<br></br><br></br>
-          <input id="usernameInput" className="p-1" type='text' placeholder='Enter handle here.' value="suizzle_"/>
+          <input 
+            id="usernameInput" 
+            className="p-1" 
+            type='text' 
+            placeholder='Enter handle here.' 
+            value="suizzle_"
+            onChange={e => setUsername(e.target.value)}
+          />
         </p>
 
 
@@ -57,7 +69,7 @@ const Home: NextPage = () => {
                 <h2 className="mb-1 font-medium text-lg">Original PFP</h2>
                 <Image
                   alt="Original Twitter / X PFP"
-                  src= {`https://unavatar.io/twitter/suizzle_`}
+                  src= {`https://unavatar.io/twitter/${username}`}
                   className="w-96 h-96 rounded-2xl"
                   width={400}
                   height={400}
