@@ -8,13 +8,23 @@ import SquigglyLines from '../components/SquigglyLines';
 import { Testimonials } from '../components/Testimonials';
 import va from '@vercel/analytics';
 import React, { useState } from 'react';
+import imglyRemoveBackground from "@imgly/background-removal"
 
 const Home: NextPage = () => {
 
   const [username, setUsername] = useState("CoqInuAvax");
-
+  let noBackgroundUrl = "";
   async function update(username: string) {
     await setUsername(username);
+  }
+
+  async function fullPenetration() {
+    let image_src: ImageData | ArrayBuffer | Uint8Array | Blob | URL | string = `https://unavatar.io/twitter/${username}`;
+ 
+    imglyRemoveBackground(image_src).then((blob: Blob) => {
+      // The result is a blob encoded as PNG. It can be converted to an URL to be used as HTMLImage.src
+    noBackgroundUrl = URL.createObjectURL(blob);
+})
   }
 
   return (
@@ -83,10 +93,13 @@ const Home: NextPage = () => {
                   alt="Coqified PFP"
                   width={400}
                   height={400}
-                  src="/michael-new.jpg"
+                  src= {noBackgroundUrl}
                   className="w-96 h-96 rounded-2xl sm:mt-0 mt-2"
                 />
               </div>
+            </div>
+            <div className="flex sm:space-x-2 sm:flex-row flex-col">
+              <a href='#'>Download Coqified PFP</a>
             </div>
           </div>
         </div>
