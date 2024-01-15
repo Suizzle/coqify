@@ -13,6 +13,10 @@ const Home: NextPage = () => {
 
   const [username, setUsername] = useState("CoqInuAvax");
 
+  async function update(username: string) {
+    await setUsername(username);
+  }
+
   return (
     <div className="bg-yellow-200 bg-cover bg-[url('/coq-inu.png')] flex w-screen mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
@@ -35,7 +39,7 @@ const Home: NextPage = () => {
             type='text' 
             placeholder='Enter handle here.' 
             value={username}
-            onChange={e => setUsername(e.target.value)}
+            onChange={e => update(e.target.value)}
           />
         </p>
 
