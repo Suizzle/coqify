@@ -57,30 +57,28 @@ const Home: NextPage = () => {
 
         <div className="flex justify-center space-x-4">
           <Image
-            id="coqring"
+            id="coqring1"
             alt="Original Twitter / X PFP"
             src= {'/coqify-overlay.png'}
-            width={20}
-            height={20}
+            width={40}
+            height={40}
           />
-          <button 
-            className="bg-black rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80"
-            onClick={() => va.track('RoomGPT link clicked')}
-          >
-            Classic $COQ Ring
-          </button>
-          <button 
-            className="bg-black rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80"
-            onClick={() => va.track('RoomGPT link clicked')}
-          >
-            Black $COQ Letters
-          </button>  
-          <button 
-            className="bg-black rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80"
-            onClick={() => va.track('RoomGPT link clicked')}
-          >
-            Purple $COQ Thrust
-          </button>     
+          <Image
+            id="coqring2"
+            alt="Original Twitter / X PFP"
+            src= {'/coqify-overlay.png'}
+            className=""
+            width={40}
+            height={40}
+          />
+          <Image
+            id="coqring3"
+            alt="Original Twitter / X PFP"
+            src= {'/coqify-overlay.png'}
+            className=""
+            width={40}
+            height={40}
+          />
           <button 
             className="bg-black rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80"
             onClick={() => va.track('RoomGPT link clicked')}
