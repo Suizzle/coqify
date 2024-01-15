@@ -32,11 +32,10 @@ const Home: NextPage = () => {
         <p className="mx-auto mt-12 max-w-xl text-lg text-slate-950 font-bold leading-7">
           Enter your Twitter / X username:<br></br><br></br>
           <input 
-            id="usernameInput" 
             className="p-1" 
             type='text' 
             placeholder='Enter handle here.' 
-            value=""
+            value="CoqInuAvax"
             onChange={e => setUsername(e.target.value)}
           />
         </p>
