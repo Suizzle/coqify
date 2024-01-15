@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#tweet {
+    position: relative;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 2px 20px;
+    background-color: #1d9bf0;
+    color: #fff;
+    border-radius: 9999px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    vertical-align: middle!important;
+}
+#tweet:hover {
+    background-color: blue;
+}
+
+#coqDownload {
+    position: relative;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 2px 20px;
+    background-color: #52ff4c;
+    color: #fff;
+    border-radius: 9999px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    vertical-align: middle!important;
+}
+#coqDownload:hover {
+    background-color: green;
+}

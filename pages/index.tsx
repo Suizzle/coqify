@@ -122,7 +122,7 @@ const Home: NextPage = () => {
             </div>
             <div className="flex sm:space-x-2 sm:flex-row flex-col">
               <a href="#" id="coqDownload" onClick={download} download>Download</a>
-              <button onClick={tweet}>Tweet</button>
+              <a id="tweet" onClick={tweet}>Tweet</a>
             </div>
           </div>
         </div>
