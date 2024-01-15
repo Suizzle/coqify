@@ -34,7 +34,7 @@ const Home: NextPage = () => {
             className="p-1" 
             type='text' 
             placeholder='Enter handle here.' 
-            value="CoqInuAvax"
+            value={username}
             onChange={e => setUsername(e.target.value)}
           />
         </p>
