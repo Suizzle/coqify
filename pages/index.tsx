@@ -102,7 +102,6 @@ const Home: NextPage = () => {
               </div>
             </div>
             <div className="flex sm:space-x-2 sm:flex-row flex-col">
-              <a href='#'>Download Coqified PFP</a>
             </div>
           </div>
         </div>
