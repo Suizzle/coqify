@@ -17,7 +17,6 @@ const Home: NextPage = () => {
 
   const [username, setUsername] = useState("CoqInuAvax");
   const [filter, setFilter] = useState("FullPenetration");
-  const [noBackgroundUrl, setNoBackgroundUrl] = useState("");
   
   async function update(username: string) {
     await setUsername(username);
@@ -27,7 +26,7 @@ const Home: NextPage = () => {
     coqified.src = "/coqify-overlay.png";
     const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
     ctx.drawImage(original, 0, 0);
-    ctx.drawImage(coqified, 0, 0);
+    //ctx.drawImage(coqified, 0, 0);
   }
 
   return (
