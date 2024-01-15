@@ -7,9 +7,7 @@ import Header from '../components/Header';
 import SquigglyLines from '../components/SquigglyLines';
 import { Testimonials } from '../components/Testimonials';
 import va from '@vercel/analytics';
-import React, { CanvasHTMLAttributes, Context, useState } from 'react';
-
-const {removeBackground} = require("@imgly/background-removal");
+import React, { useState } from 'react';
 
 //const {removeBackground} = require("@imgly/background-removal-node");
 
@@ -61,7 +59,7 @@ const Home: NextPage = () => {
 
 
         <div className="flex sm:space-x-2 sm:flex-row flex-col mt-10">
-          <h2>COQ Ring Options:</h2>
+          <h2>COQ Ring:</h2>
           <Image
               id="coqifyred"
               alt="Original Twitter / X PFP"
