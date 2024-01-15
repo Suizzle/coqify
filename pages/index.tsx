@@ -22,11 +22,10 @@ const Home: NextPage = () => {
     await setUsername(username);
     const canvas = document.getElementById("canvas") as HTMLCanvasElement;
     const original = document.getElementById("original") as HTMLImageElement;
-    const coqified = document.getElementById("coqified") as HTMLImageElement; 
-    coqified.src = "/coqify-overlay.png";
+    const coqring = document.getElementById("coqring") as HTMLImageElement; 
     const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
     ctx.drawImage(original, 0, 0);
-    ctx.drawImage(coqified, 0, 0);
+    ctx.drawImage(coqring, 0, 0);
   }
 
   return (
@@ -58,7 +57,7 @@ const Home: NextPage = () => {
 
         <div className="flex justify-center space-x-4">
           <Image
-            id="original"
+            id="coqring"
             alt="Original Twitter / X PFP"
             src= {'/coqify-overlay.png'}
             className="w-96 h-96 rounded-2xl"
