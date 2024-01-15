@@ -34,7 +34,7 @@ const Home: NextPage = () => {
   }
 
   function tweet() {
-    var text = "Bok! I Coqified my profile with Coqify by @suizzle_! https://coqify.vercel.app";
+    var text = "Bok! I Coqified my profile with Coqify by @suizzle_ https://coqify.vercel.app";
     var encoded = encodeURIComponent(text);
     var twitterIntentUrl = "https://twitter.com/intent/tweet?text=" + encoded;
     window.open(twitterIntentUrl);
@@ -46,7 +46,7 @@ const Home: NextPage = () => {
     <div className="bg-yellow-200 bg-cover bg-[url('/coq-inu.png')] flex w-screen mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
         <title>🐓 Coqify Your Profile</title>
-        <meta name="twitter:card" content="player" />
+        <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="https://coqify.vercel.app" />
         <meta name="twitter:title" content="Coqify" />
         <meta name="twitter:description" content="Show COQ alignment - add a COQ ring to your pfp." />
