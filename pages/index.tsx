@@ -46,11 +46,12 @@ const Home: NextPage = () => {
     <div className="bg-yellow-200 bg-cover bg-[url('/coq-inu.png')] flex w-screen mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
         <title>🐓 Coqify Your Profile</title>
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="player" />
         <meta name="twitter:site" content="https://coqify.vercel.app" />
         <meta name="twitter:title" content="Coqify" />
         <meta name="twitter:description" content="Show COQ alignment - add a COQ ring to your pfp." />
         <meta name="twitter:image" content={coqDataURL} />
+        <meta name="og:image" content={coqDataURL} />
       </Head>
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-20"> 
