@@ -7,13 +7,12 @@ import Header from '../components/Header';
 import SquigglyLines from '../components/SquigglyLines';
 import { Testimonials } from '../components/Testimonials';
 import va from '@vercel/analytics';
-import { useState } from 'react';
-
-const [username, setUsername] = useState("suizzle_");
-
-
+import React, { useState } from 'react';
 
 const Home: NextPage = () => {
+
+  const [username, setUsername] = useState("suizzle_");
+
   return (
     <div className="bg-yellow-200 bg-cover bg-[url('/coq-inu.png')] flex w-screen mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
