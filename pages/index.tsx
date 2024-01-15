@@ -74,26 +74,6 @@ const Home: NextPage = () => {
           />
         </p>
 
-        <div className="flex sm:space-x-2 sm:flex-row flex-col mt-10">
-          <h2>Pick a COQ Ring:</h2>
-          <Image
-              id="coqifyred"
-              alt="Original Twitter / X PFP"
-              src= "/redcoqring.png"
-              className="border-solid border-8 border-green-300 rounded-full"
-              width={96}
-              height={96}
-            />
-          <Image
-            id="coqifypurp"
-            alt="Original Twitter / X PFP"
-            src= "/purplecoqring.png"
-            className=""
-            width={96}
-            height={96}
-          />
-        </div>
-
         <div className="flex justify-between items-center w-full flex-col sm:mt-10 mt-6">
           <div className="flex flex-col space-y-10 mt-4 mb-16">
             <div className="flex sm:space-x-2 sm:flex-row flex-col">
@@ -125,6 +105,20 @@ const Home: NextPage = () => {
               <a id="tweet" onClick={tweet}>Tweet</a>
             </div>
           </div>
+          <div className="flex sm:space-x-2 sm:flex-row flex-col mt-10 font-bold">
+          <h2>Your COQ Ring:</h2>
+          <Image
+              id="coqifyred"
+              alt="Original Twitter / X PFP"
+              src= "/redcoqring.png"
+              className=""
+              width={96}
+              height={96}
+            />
+            <h2>More options coming soon!</h2>
+        </div>
+
+
         </div>
       </main>
       <Footer />

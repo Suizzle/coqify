@@ -26,18 +26,6 @@ export default function Header({ photo }: { photo?: string | undefined }) {
         />
       ) : (
         <div className="flex space-x-6">
-          <Link
-            href="/"
-            className="border-r border-yellow-300 pr-4 space-x-2 hover:text-blue-400 transition hidden sm:flex"
-          >
-            <p className="font-medium text-base">Home</p>
-          </Link>
-          <Link
-            href="/"
-            className="border-yellow-300 pr-4 space-x-2 hover:text-blue-400 transition hidden sm:flex"
-          >
-            <p className="font-medium text-base">Sponsors</p>
-          </Link>
         </div>
       )}
     </header>
