@@ -20,14 +20,17 @@ const Home: NextPage = () => {
   async function update(username: string) {
     await setUsername(username);
     const canvas = document.getElementById("canvas") as HTMLCanvasElement;
+    const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
     const original = document.getElementById("original") as HTMLImageElement;
+    const coqring = document.getElementById("coqifyred") as HTMLImageElement;
     original.onload = () => {
       ctx.drawImage(original, 0, 0);
+      ctx.drawImage(coqring, 0, 0);
     }
-    //const coqring = document.getElementById("coqring") as HTMLImageElement; 
-    const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
-    
-    //ctx.drawImage(coqring, 0, 0);
+     
+    coqring.onload = () => {  
+      
+    }
   }
 
   return (
@@ -94,6 +97,22 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
+        <Image
+            id="coqifyred"
+            alt="Original Twitter / X PFP"
+            src= "/redcoq.png"
+            className="align-inline"
+            width={96}
+            height={96}
+          />
+          <Image
+            id="coqifypurp"
+            alt="Original Twitter / X PFP"
+            src= "/purplecoqring.png"
+            className="align-inline"
+            width={96}
+            height={96}
+          />
       </main>
       <Footer />
     </div>
