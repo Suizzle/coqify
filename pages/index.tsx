@@ -23,8 +23,8 @@ const Home: NextPage = () => {
     await setUsername(username);
     const canvas = document.getElementById("canvas") as HTMLCanvasElement;
     const original = document.getElementById("original") as HTMLImageElement;
-    const coqified = document. createElement("coqified") as HTMLImageElement; 
-    coqified.src = "./coqify-overlay.png";
+    const coqified = document.createElement("coqified") as HTMLImageElement; 
+    coqified.src = "/coqify-overlay.png";
     const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
     ctx.drawImage(original, 0, 0);
     ctx.drawImage(coqified, 0, 0);
