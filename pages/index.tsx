@@ -74,9 +74,8 @@ const Home: NextPage = () => {
           />
         </p>
 
-
         <div className="flex sm:space-x-2 sm:flex-row flex-col mt-10">
-          <h2>COQ Ring:</h2>
+          <h2>Pick a COQ Ring:</h2>
           <Image
               id="coqifyred"
               alt="Original Twitter / X PFP"
