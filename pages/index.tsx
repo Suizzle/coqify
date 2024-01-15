@@ -25,7 +25,7 @@ const Home: NextPage = () => {
     const original = document.getElementById("original") as HTMLImageElement;
     const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
     ctx.drawImage(original, 0, 0);
-    ctx.drawImage(image2, 0, 0);
+    //ctx.drawImage(image2, 0, 0);
   }
 
   return (
