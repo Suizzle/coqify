@@ -20,16 +20,29 @@ const Home: NextPage = () => {
     const canvas = document.getElementById("canvas") as HTMLCanvasElement;
     const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
     const original = document.getElementById("original") as HTMLImageElement;
+    original.crossOrigin="anonymous"
     const coqring = document.getElementById("coqifyred") as HTMLImageElement;
     original.onload = () => {
       ctx.drawImage(original, 0, 0);
       ctx.drawImage(coqring, 0, 0);
+      let dataUrl = canvas.toDataURL("image/png");
     }
-     
-    coqring.onload = () => {  
-      
-    }
+  }   
+  function download() {
+    const coqDownload = document.getElementById("coqDownload") as HTMLAnchorElement;
+    const coqCanvas = document.getElementById("canvas") as HTMLCanvasElement;
+    const coqDataUrl = coqCanvas.toDataURL("image/png");
+    coqDownload.href = coqDataUrl;
   }
+
+  function tweet() {
+    var text = "Bok! I Coqified my profile with Coqify by @suizzle_!";
+    var encoded = encodeURIComponent(text);
+    var twitterIntentUrl = "https://twitter.com/intent/tweet?text=" + encoded;
+    window.open(twitterIntentUrl);
+  }
+
+  
 
   return (
     <div className="bg-yellow-200 bg-cover bg-[url('/coq-inu.png')] flex w-screen mx-auto flex-col items-center justify-center py-2 min-h-screen">
@@ -85,8 +98,9 @@ const Home: NextPage = () => {
                 <h2 className="mb-1 font-medium text-lg">Original PFP</h2>
                 <Image
                     id="original"
+                    crossOrigin="anonymous"
                     alt="Original Twitter / X PFP"
-                    src= {`https://unavatar.io/twitter/${username}`}
+                    src= {`http://unavatar.io/twitter/${username}`}
                     className="w-96 h-96 rounded-2xl"
                     width={400}
                     height={400}
@@ -104,6 +118,8 @@ const Home: NextPage = () => {
               </div>
             </div>
             <div className="flex sm:space-x-2 sm:flex-row flex-col">
+              <a href="#" id="coqDownload" onClick={download} download>Download</a>
+              <button onClick={tweet}>Tweet</button>
             </div>
           </div>
         </div>
