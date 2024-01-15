@@ -9,12 +9,10 @@ import { Testimonials } from '../components/Testimonials';
 import va from '@vercel/analytics';
 import React, { useState } from 'react';
 
-//const {removeBackground} = require("@imgly/background-removal-node");
-
 const Home: NextPage = () => {
 
   const [username, setUsername] = useState("CoqInuAvax");
-  
+  const [coqDataURL, setCoqDataURL] = useState("");
   async function update(username: string) {
     await setUsername(username);
     const canvas = document.getElementById("canvas") as HTMLCanvasElement;
@@ -25,14 +23,14 @@ const Home: NextPage = () => {
     original.onload = () => {
       ctx.drawImage(original, 0, 0);
       ctx.drawImage(coqring, 0, 0);
-      let dataUrl = canvas.toDataURL("image/png");
+      setCoqDataURL(canvas.toDataURL("image/png"));
     }
   }   
   function download() {
     const coqDownload = document.getElementById("coqDownload") as HTMLAnchorElement;
     const coqCanvas = document.getElementById("canvas") as HTMLCanvasElement;
-    const coqDataUrl = coqCanvas.toDataURL("image/png");
-    coqDownload.href = coqDataUrl;
+    setCoqDataURL(coqCanvas.toDataURL("image/png"));
+    coqDownload.href = coqDataURL;
   }
 
   function tweet() {
@@ -48,6 +46,11 @@ const Home: NextPage = () => {
     <div className="bg-yellow-200 bg-cover bg-[url('/coq-inu.png')] flex w-screen mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
         <title>🐓 Coqify Your Profile</title>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="https://coqify.vercel.app" />
+        <meta name="twitter:title" content="Coqify" />
+        <meta name="twitter:description" content="Show COQ alignment - add a COQ ring to your pfp." />
+        <meta name="twitter:image" content={coqDataURL} />
       </Head>
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-20"> 
